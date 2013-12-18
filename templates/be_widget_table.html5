@@ -1,0 +1,18 @@
+<table class="tl_listing">
+    <thead>
+    <tr>
+        {% for header in headers %}
+        <td class="tl_folder_tlist">{{header}}</td>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in items %}
+    <tr>
+        {% for field in fields %}
+        <td class="tl_file_list">{{item[field]}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,15 @@
+/* line 9, ../sass/print.sass */
+body, h1 {
+  font-family: sans-serif !important; }
+
+/* line 13, ../sass/print.sass */
+table {
+  width: 100%;
+  border: none !important; }
+  /* line 18, ../sass/print.sass */
+  table td {
+    padding: 5px; }
+
+/* line 22, ../sass/print.sass */
+.label {
+  font-weight: bold; }

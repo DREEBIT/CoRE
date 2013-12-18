@@ -1,0 +1,32 @@
+@import compass/utilities/general/float
+
+@import colors
+@import blueprint/buttons
+
+$blueprint-border-color: #333
+
+.button, .button.tl_submit
+	background: transparent
+	+button-colors($button-font-color,$button-background-color,$button-border-color)
+
+
+// We can change the colors for buttons of certain classes, etc.
+a.positive, button.positive
+	+button-colors(#529214, #E6EFC2, #457e30)
+
+a.negative, button.negative
+	+button-colors(#D12F19, #FBE3E4, #997475)
+
+a.warning, button.warning
+	+button-colors(#d1ae03, #fbf6e4, #aeaa5f)
+
+button.rejected, button.rejected.tl_submit:disabled
+	@extend button.negative
+
+button.waiting_for_customer.disabled, button.waiting_for_customer.tl_submit:disabled,
+button.waiting_for_supplier.disabled, button.waiting_for_supplier.tl_submit:disabled
+	@extend button.warning
+
+button.valid.disabled, button.valid.tl_submit:disabled,
+button.approved.disabled, button.approved.tl_submit:disabled
+	@extend button.positive

@@ -1,0 +1,26 @@
+/* line 8, ../sass/core.sass */
+.button, .button.tl_submit {
+  background: transparent;
+  background-color: #eeeeee;
+  border-color: #767676 #666666 #666666 #767676;
+  color: #666666; }
+
+/* line 14, ../sass/core.sass */
+a.positive, button.positive, button.valid.disabled, button.valid.tl_submit:disabled,
+button.approved.disabled, button.approved.tl_submit:disabled {
+  background-color: #e6efc2;
+  border-color: #558e40 #457e30 #457e30 #558e40;
+  color: #529214; }
+
+/* line 17, ../sass/core.sass */
+a.negative, button.negative, button.rejected, button.rejected.tl_submit:disabled {
+  background-color: #fbe3e4;
+  border-color: #a98485 #997475 #997475 #a98485;
+  color: #d12f19; }
+
+/* line 20, ../sass/core.sass */
+a.warning, button.warning, button.waiting_for_customer.disabled, button.waiting_for_customer.tl_submit:disabled,
+button.waiting_for_supplier.disabled, button.waiting_for_supplier.tl_submit:disabled {
+  background-color: #fbf6e4;
+  border-color: #beba6f #aeaa5f #aeaa5f #beba6f;
+  color: #d1ae03; }
