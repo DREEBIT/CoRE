@@ -130,7 +130,7 @@ $GLOBALS['TL_DCA']['tl_core_project_snapshot'] = array
         ),
 		'tstamp' => array
 		(
-            'label'                   => &$GLOBALS['TL_LANG']['tl_core_project_snapshot']['created'],
+            'label'                   => &$GLOBALS['TL_LANG']['tl_core_project_snapshot']['tstamp'],
             'inputType'               => 'text',
             'eval'                    => array
             (
@@ -273,7 +273,8 @@ class tl_core_project_snapshot extends Backend
         $params = array
         (
             "project"   => $project->row(),
-            "snapshot"  => $snapshotArray
+            "snapshot"  => $snapshotArray,
+            "locale"    => $GLOBALS['TL_LANG']['tl_core_project_snapshot']['export']
         );
 
 //        echo '<pre>'; var_dump($params);die;

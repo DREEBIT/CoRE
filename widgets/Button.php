@@ -1,27 +1,22 @@
 <?php
 
 /**
- * Isotope eCommerce for Contao Open Source CMS
+ * DREEBIT CoRE for Contao Open Source CMS
  *
- * Copyright (C) 2009-2012 Isotope eCommerce Workgroup
+ * Copyright (C) 2013-1014 DREEBIT GmbH
  *
- * @package    Isotope
- * @link       http://www.isotopeecommerce.com
- * @license    http://opensource.org/licenses/lgpl-3.0.html LGPL
+ * @package    Dreebit
  */
 
 namespace Contao;
 
 
 /**
- * Class DcaWizard
+ * Class Button
  *
- * Back end widget "dca wizard".
- * @copyright  Isotope eCommerce Workgroup 2009-2012
- * @author     Yanick Witschi <yanick.witschi@terminal42.ch>
- * @author     Andreas Schempp <andreas.schempp@terminal42.ch>
- * @author     Christian de la Haye <service@delahaye.de>
- * @author     Kamil Kuzminski <kamil.kuzminski@codefog.pl>
+ * Back end widget "Button".
+ * @copyright  Dreebit GmbH
+ * @author     Toni Moeckel
  */
 class Button extends \Widget
 {
@@ -48,33 +43,8 @@ class Button extends \Widget
         if (!$this->submit_value){
             $this->submit_value = "button";
         }
-//        echo '<pre>'; var_dump($this);die;
 
     }
-
-
-    /**
-     * Add specific attributes
-     * @param string
-     * @param mixed
-     */
-    public function __set($strKey, $varValue)
-    {
-        parent::__set($strKey, $varValue);
-    }
-
-
-    /**
-     * Return a parameter
-     * @return string
-     * @throws Exception
-     */
-    public function __get($strKey)
-    {
-        return parent::__get($strKey);
-    }
-
-
 
     /**
      * Generate the widget

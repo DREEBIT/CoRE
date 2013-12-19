@@ -2,6 +2,14 @@
 
 $GLOBALS['TL_LANG']['tl_core_requirement']['label'] = 'CoRE - Anforderung';
 
+
+/**
+ * Operations
+ */
+
+$GLOBALS['TL_LANG']['tl_core_requirement']['new'][0] = 'Neue Anforderung';
+$GLOBALS['TL_LANG']['tl_core_requirement']['new'][1] = 'Eine neue Anforderung anlegen';
+
 /**
  * Fields
  */
@@ -15,6 +23,26 @@ $GLOBALS['TL_LANG']['tl_core_requirement']['description']['1'] = "Geben Sie eine
 
 $GLOBALS['TL_LANG']['tl_core_requirement']['state']['0'] = "Status";
 $GLOBALS['TL_LANG']['tl_core_requirement']['state']['1'] = "Geben Sie einen Status an";
+
+$GLOBALS['TL_LANG']['tl_core_requirement']['category']['0'] = "Kategorie";
+$GLOBALS['TL_LANG']['tl_core_requirement']['category']['1'] = "Geben wählen Sie eine entsprechende Kategorie";
+
+$GLOBALS['TL_LANG']['tl_core_requirement']['steakholder']['0'] = "Steakholder";
+$GLOBALS['TL_LANG']['tl_core_requirement']['steakholder']['1'] = "Steakholder der Anforderung";
+
+$GLOBALS['TL_LANG']['tl_core_requirement']['testCases']['0'] = "Testfälle";
+$GLOBALS['TL_LANG']['tl_core_requirement']['testCases']['1'] = "Sie können mehrere Testfälle angeben";
+
+$GLOBALS['TL_LANG']['tl_core_requirement']['prerequisite']['0'] = "Erforderliche Anforderungen";
+$GLOBALS['TL_LANG']['tl_core_requirement']['prerequisite']['1'] = "Folgende Anforderungen sind erforderlich";
+
+$GLOBALS['TL_LANG']['tl_core_requirement']['influenceTo']['0'] = "Beeinflusste Anforderungen";
+$GLOBALS['TL_LANG']['tl_core_requirement']['influenceTo']['1'] = "Folgende Anforderungen werden beeinflusst";
+
+$GLOBALS['TL_LANG']['tl_core_requirement']['files']['0'] = "Anhänge";
+$GLOBALS['TL_LANG']['tl_core_requirement']['files']['1'] = "Wählen Sie Datein, die Sie an die Anforderung anhöngen möchten.";
+
+$GLOBALS['TL_LANG']['tl_core_requirement']['sub_requirements']['0'] = "Unteranforderungen";
 
 $GLOBALS['TL_LANG']['tl_core_requirement']['acceptButton']['open']['0'] = "Bitte bestätigen";
 $GLOBALS['TL_LANG']['tl_core_requirement']['acceptButton']['open']['1'] = "Bitte bestätigen Sie die Anforderung";

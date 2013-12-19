@@ -1,27 +1,22 @@
 <?php
 
 /**
- * Isotope eCommerce for Contao Open Source CMS
+ * DREEBIT CoRE for Contao Open Source CMS
  *
- * Copyright (C) 2009-2012 Isotope eCommerce Workgroup
+ * Copyright (C) 2013-1014 DREEBIT GmbH
  *
- * @package    Isotope
- * @link       http://www.isotopeecommerce.com
- * @license    http://opensource.org/licenses/lgpl-3.0.html LGPL
+ * @package    Dreebit
  */
 
 namespace Contao;
 
 
 /**
- * Class DcaWizard
+ * Class Table
  *
- * Back end widget "dca wizard".
- * @copyright  Isotope eCommerce Workgroup 2009-2012
- * @author     Yanick Witschi <yanick.witschi@terminal42.ch>
- * @author     Andreas Schempp <andreas.schempp@terminal42.ch>
- * @author     Christian de la Haye <service@delahaye.de>
- * @author     Kamil Kuzminski <kamil.kuzminski@codefog.pl>
+ * Back end widget "Table".
+ * @copyright  Dreebit GmbH
+ * @author     Toni Moeckel
  */
 
 
@@ -44,32 +39,7 @@ class Table extends \Widget
     {
         parent::__construct($arrAttributes);
 
-//        echo '<pre>'; var_dump($this->headerFields);die;
-
     }
-
-
-    /**
-     * Add specific attributes
-     * @param string
-     * @param mixed
-     */
-    public function __set($strKey, $varValue)
-    {
-        parent::__set($strKey, $varValue);
-    }
-
-
-    /**
-     * Return a parameter
-     * @return string
-     * @throws Exception
-     */
-    public function __get($strKey)
-    {
-        return parent::__get($strKey);
-    }
-
 
 
     /**
@@ -78,6 +48,10 @@ class Table extends \Widget
      */
     public function generate()
     {
+
+        if ($this->doNotShow){
+            return '';
+        }
 
         $items = \System::importStatic($this->listCallback[0])->{$this->listCallback[1]}();
         if (is_array($items)){
@@ -96,13 +70,8 @@ class Table extends \Widget
         }else {
             return "Keine Daten vorhanden";
         }
-//        echo '<pre>'; var_dump($data);die;
 
-        if ($this->doNotShow){
-            return '';
-        }
-
-        return 'Hallo';
+        return '';
     }
 
 }

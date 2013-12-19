@@ -16,9 +16,9 @@
             <div class="project large-12 columns">
 
                 <h1>{{project.title}}</h1>
-                <h3>Version vom: {{snapshot.date}}</h3>
+                <h3>{{locale.version_from}}: {{snapshot.date}}</h3>
                 <hr>
-                <h3>Anforderungen:</h3>
+                <h3>{{locale.requirements}}:</h3>
             </div>
         </div>
 
@@ -32,26 +32,26 @@
 
                     <table width="100%">
                         <tr>
-                            <td class="label" width="17%">Status</td>
+                            <td class="label" width="17%">{{locale.state}}</td>
                             <td width="17%">{{requirement.state}}</td>
 
-                            <td class="label" width="17%">Kategorie</td>
+                            <td class="label" width="17%">{{locale.category}}</td>
                             <td width="17%">{{requirement.category}}</td>
 
-                            <td class="label" width="17%">Steakholder</td>
-                            <td width="17%">{{ requirement.steakholder is empty ? 'keine Angaben' : requirement.steakholder}}</td>
+                            <td class="label" width="17%">{{locale.steakholder}}</td>
+                            <td width="17%">{{ requirement.steakholder is empty ? locale.no_entry : requirement.steakholder}}</td>
                         </tr>
 
                         <tr>
-                            <td class="label">Beschreibung</td>
-                            <td colspan="2">{{ requirement.description is empty ? 'keine Angaben' : requirement.steakholder}}</td>
+                            <td class="label">{{locale.description}}</td>
+                            <td colspan="2">{{ requirement.description is empty ? locale.no_entry : requirement.description}}</td>
                         </tr>
 
                         <tr>
-                            <td class="label">Testfälle</td>
+                            <td class="label">{{locale.test_cases}}</td>
                             <td colspan="2">
                             {% if requirement.testCases is empty %}
-                                keine Angaben
+                                {{locale.no_entry}}
                             {% else %}
                                 <ul>
                                 {% for case in requirement.testCases %}
@@ -62,8 +62,6 @@
                             </td>
                         </tr>
                     </table>
-
-
 
                 </fieldset>
             </form>

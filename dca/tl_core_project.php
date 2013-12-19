@@ -147,7 +147,7 @@ $GLOBALS['TL_DCA']['tl_core_project'] = array
 		),
         'supplier' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_user']['groups'],
+            'label'                   => &$GLOBALS['TL_LANG']['tl_core_project']['supplier'],
             'exclude'                 => true,
             'filter'                  => true,
             'inputType'               => 'select',
@@ -161,7 +161,7 @@ $GLOBALS['TL_DCA']['tl_core_project'] = array
         ),
         'customer' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_user']['groups'],
+            'label'                   => &$GLOBALS['TL_LANG']['tl_core_project']['customer'],
             'exclude'                 => true,
             'filter'                  => true,
             'inputType'               => 'select',
